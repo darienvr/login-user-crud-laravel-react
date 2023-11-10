@@ -25,7 +25,6 @@ const Signup = () => {
       .then(({data})=> {
         setUser(data.user)
         setToken(data.token)
-        console.log('todo bien ')
       })
       .catch(err=>{
         const response = err.response;
