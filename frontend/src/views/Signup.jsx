@@ -36,17 +36,17 @@ const Signup = () => {
 
   return (
     <div>
-        <h3>Ingrese sus datos: </h3>
+        <h3 className='title-signup'>Ingrese sus datos </h3>
         <form onSubmit={onSubmit} className='formulario'>
           <label className='form-label'><b>Nombre</b> </label>
           <input ref={nameRef}  className='form-control' type='text'></input> 
-          {errors && errors.name && (<p className='alerta'>{errors.name}</p>)}
+          {errors && errors.name && (<p className='alerta'>*{errors.name}</p>)}
           <label className='form-label'><b>Email</b> </label> 
           <input ref={emailRef} className='form-control'  type='email'></input>
-          {errors && errors.email && (<p className='alerta'>{errors.email}</p>)}
+          {errors && errors.email && (<p className='alerta'>*{errors.email}</p>)}
           <label className='form-label'><b>Contraseña</b> </label>
           <input ref={passwordRef} className='form-control'  type='password'></input>
-          {errors && errors.password && (<p className='alerta'>{errors.password}</p>)}
+          {errors && errors.password && (<p className='alerta'>*{errors.password}</p>)}
           <label className='form-label'><b>Confirmar contraseña</b></label> 
           <input ref={passwordConfirmationRef} className='form-control'  type='password'></input>
           <button className='btn-login' type='submit'>Registrar</button>

@@ -21,8 +21,8 @@ input {
     background: #ffffff;
     width: 100%;
     border: 2px solid #e6e6e6;
-    margin: 0 0 15px;
-    padding: 13px;
+    padding: 10px;
+    margin-bottom: 8px;
     box-sizing: border-box;
     font-size: 14px;
     transition: all 0.3s;
@@ -196,6 +196,10 @@ table > tbody > tr > td {
 .subtitle-login {
     font-size: 1rem;
     margin: 5px 0;
+}
+
+.title-signup {
+    font-size: 1.5rem;
 }
 
 .contenedor-form {
