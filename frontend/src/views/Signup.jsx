@@ -52,7 +52,7 @@ const Signup = () => {
           <button className='btn-login' type='submit'>Registrar</button>
           <div className='contenedor-registrarse'>
             <p>¿Ya tiene una cuenta?</p>
-            <a className='btn-signup' href='/login'>Iniciar Sesion</a>
+            <a className='btn-link' href='/login'>Iniciar Sesion</a>
           </div>
           
         </form>

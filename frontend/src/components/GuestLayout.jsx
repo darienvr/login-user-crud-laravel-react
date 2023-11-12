@@ -18,7 +18,7 @@ const GuestLayout = () => {
             <div className='contenedor-img'>
                 <img className='img-login' src={loginImg}></img>
             </div>
-            <div className='contenedor-formulario'>
+            <div className='contenedor-formulario animated fadeInDown'>
                 <Outlet />
             </div>
         </div>
