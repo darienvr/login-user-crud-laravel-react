@@ -37,13 +37,13 @@ const Login = () => {
         <h1 className='title-login'>Bienvenido</h1>
         <h5 className='subtitle-login'>Ingrese su cuenta</h5>
         <form onSubmit={onSubmit} className='formulario'>
-          {message && !errors && (<p className='alerta'>{message}</p>)}
+          {message && !errors && (<p className='alerta'>*{message}</p>)}
           <label className='form-label'><b>Email</b></label> <br/>
           <input ref={emailRef} className='form-control-login' type='email'></input>
-          {errors && errors.email && (<p className='alerta'>{errors.email}</p>)} <br/>
+          {errors && errors.email && (<p className='alerta'>*{errors.email}</p>)} <br/>
           <label className='form-label'><b>Contraseña</b></label> <br/>
           <input ref={passwordRef} className='form-control-login' type='password'></input> 
-          {errors && errors.password && (<p className='alerta'>{errors.password}</p>)} <br/>
+          {errors && errors.password && (<p className='alerta'>*{errors.password}</p>)} <br/>
           <button className='btn-login' type='submit'>Iniciar Sesion</button> <br/>
           <div className='contenedor-registrarse'>
             <p>¿No tiene una cuenta?</p>
