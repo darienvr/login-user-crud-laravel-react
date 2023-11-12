@@ -46,7 +46,7 @@ const Signup = () => {
           {errors && errors.email && (<p className='alerta'>*{errors.email}</p>)}
           <label className='form-label'><b>Contraseña</b> </label>
           <input ref={passwordRef} className='form-control'  type='password'></input>
-          {errors && errors.password && (<p className='alerta'>*{errors.password}</p>)}
+          {errors && errors.password && (<p className='alerta'>*{errors.password[0]}</p>)}
           <label className='form-label'><b>Confirmar contraseña</b></label> 
           <input ref={passwordConfirmationRef} className='form-control'  type='password'></input>
           <button className='btn-login' type='submit'>Registrar</button>
