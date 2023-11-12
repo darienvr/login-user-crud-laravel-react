@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { Link, Outlet, Navigate } from 'react-router-dom'
 import { useStateContext } from '../contexts/ContextProvider'
 import axiosClient from '../axios-client'
+import dashboardImg from '../assets/dashboard-logo.png'
+import userImg from '../assets/user-logo.png'
+import { HiOutlineLogout } from 'react-icons/hi';
 
 const DefaultLayout = () => {
 
@@ -30,17 +33,18 @@ const DefaultLayout = () => {
   return (
     <div id='defaultLayout'>
         <aside>
+            <img className='img-logo' src={dashboardImg} />
             <Link to='/dashboard'>Dashboard</Link>
             <Link to='/users'>Users</Link>
         </aside>
         <div className='content'>
             <header>
-                <div>
-                    Header
+                <div className='user-info-container'>
+                    <img className='img-user' src={userImg} alt="Logo de usuario" />
+                    {user.name}
                 </div>
                 <div>
-                    {user.name}
-                    <a onClick={onLogout} className='btn-logout' href="#">Logout</a>
+                    <a onClick={onLogout} className='btn-logout' href="#">Logout <HiOutlineLogout className='logo-logout' color='red'/> </a>
                 </div>
             </header>
             <main>

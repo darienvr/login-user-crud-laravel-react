@@ -39,7 +39,7 @@ input:focus {
 .btn-delete {
     font-family: "Roboto", sans-serif;
     outline: 0;
-    background: #5b08a7;
+    background: #f6bc1c; 
     border: 0;
     text-decoration: none;
     padding: 15px;
@@ -77,6 +77,12 @@ input:focus {
 }
 .btn-logout:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo-logout {
+    position: relative;
+    bottom: -5px;
+    font-size: 20px
 }
 
 .btn:hover,
@@ -137,13 +143,30 @@ table > tbody > tr > td {
 
 /*******************  DASHBOARD *******************************/
 
+.user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-logo {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.img-user {
+    height: 50px;
+    width: 50px;
+}
+
 #defaultLayout {
     display: flex;
 }
 
 #defaultLayout aside {
     width: 240px;
-    background-color: #5b08a7;
+    background-color: #0092ca;
     padding: 1rem
 }
 
@@ -154,6 +177,7 @@ table > tbody > tr > td {
     color: white;
     text-decoration: none;
     transition: all 0.2s;
+    font-weight: 600;
 }
 
 #defaultLayout aside > a:hover {
