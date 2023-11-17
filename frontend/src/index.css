@@ -206,6 +206,7 @@ table > tbody > tr > td {
     margin-top: 20px;
     display: flex;
     gap: 20px;
+    color: #fff;
 }
 
 .dashboard-section {
@@ -214,24 +215,36 @@ table > tbody > tr > td {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid #0092ca;
+    background-color: #0092ca;
     width: 250px;
     height: 150px;
     padding: 20px;
     border-radius: 5px;
     font-size: 1.2rem;
+    transition: all 1s;
 }
 
-.users-length {
+.dashboard-section:nth-child(2n){
+    background-color: #04aef1;
+}
+
+.dashboard-section svg {
+    font-size: 2rem;
+}
+
+.dashboard-section:hover {
+    transform: scale(1.05);
+}
+
+.dashboard-graph {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #04648a;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #0092ca;
-    color: white;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-graph img{
+    height: 350px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .3), 0 2px 4px -1px rgba(0, 0, 0, .06);
 }
 
 /********************** LOGIN AND SIGNUP / Form *********************/
