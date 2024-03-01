@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axiosClient from '../axios-client'
 import { useStateContext } from '../contexts/ContextProvider'
+import { Link } from 'react-router-dom'
 
 const UserForm = () => {
 
@@ -80,7 +81,10 @@ const UserForm = () => {
             {errors && errors.password && (<p className='alerta'>{errors.password}</p>)}
             <input onChange={e=>setUser({...user, password: e.target.value})} placeholder='Password' type="password"  />
             <input onChange={e=>setUser({...user, password_confirmation: e.target.value})} placeholder='Password Confirmation' type="password" />
-            <button className='btn'>Save</button>
+            <div className='btn-container'>
+                <button className='btn-save'>Save</button>
+                <Link className='btn-back' to={`/users`}>Back</Link>
+            </div>
           </form>
         }
       </div>
